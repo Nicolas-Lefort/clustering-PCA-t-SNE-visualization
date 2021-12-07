@@ -54,7 +54,7 @@ for name, model, best_param in list(zip(names, models, best_param_res)):
     # add clustering results to df_visu
     df_visu["labels"] = labels
     # plot data
-    visu_pca_2d(df_visu, "labels", name)
-    visu_pca_3d(df_visu, "labels", name)
-    visu_tsne_2d(df_visu, "labels", name)
+    visu_pca_2d(df_visu.copy(), "labels", name)
+    visu_pca_3d(df_visu.copy(), "labels", name)
+    visu_tsne_2d(df_visu.copy(), "labels", name)
 

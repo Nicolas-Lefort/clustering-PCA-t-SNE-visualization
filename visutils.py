@@ -43,7 +43,7 @@ def visu_pca_3d(df, labels, name) -> None:
 
 def visu_tsne_2d(df, labels, name) -> None:
     # TSNE reduced to 2 axis for 2 visualization
-    tsne = TSNE(n_components=2, verbose=1, perplexity=40, n_iter=300)
+    tsne = TSNE(n_components=2, verbose=1, perplexity=40, n_iter=300, random_state = 42)
     tsne_results = tsne.fit_transform(df.drop(columns=labels))
     df['tsne-2d-one'] = tsne_results[:,0]
     df['tsne-2d-two'] = tsne_results[:,1]
